@@ -163,7 +163,7 @@ we dumped *pca* and *scaler* along with *LR* because they can be used to transfo
 
 
 ## Deployment
-you can access our app by following this link [prosper-loan-status-predictor](https://loan-predictor-app-team-a.herokuapp.com/)
+you can access our app by following this link [prosper-loan-status-predictor](https://prosper-loan-predictor-team-a.herokuapp.com/)
 
 ### Streamlit
 - It is a tool that lets you creating applications for your machine learning model by using simple python code.
