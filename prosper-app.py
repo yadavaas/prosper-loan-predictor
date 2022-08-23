@@ -33,7 +33,7 @@ def pickle_download():
 
 LR, pca, scaler = pickle_download()
 
-@st.cache
+@st.experimental_memo
 def download():
     data = pd.read_csv('updated_data.csv')
     dn = data[['AvailableBankcardCredit', 'BankcardUtilization', 'BorrowerAPR',
