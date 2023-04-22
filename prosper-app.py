@@ -20,7 +20,7 @@ This app predicts the **Loan Status** of the borrower.
 
 st.sidebar.header('User Input Features')
 
-@st.cache
+@st.cache_resource
 def pickle_download():
     # Reads in saved classification model
     LR = pickle.load(open('LR_pickle.pkl', 'rb'))
@@ -33,7 +33,7 @@ def pickle_download():
 
 LR, pca, scaler = pickle_download()
 
-@st.cache
+@st.cache_resource
 def download():
     data = pd.read_csv('updated_data.csv')
     dn = data[['AvailableBankcardCredit', 'BankcardUtilization', 'BorrowerAPR',
@@ -50,8 +50,8 @@ def download():
 
 df_new = download()
 
-@st.cache
-def calculation(input_df, df_new, scaler, pca):
+@st.cache_resource
+def calculation(input_df, df_new, _scaler, _pca):
     df = pd.concat([input_df, df_new], axis=0)
 
 
